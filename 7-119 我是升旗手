@@ -1,0 +1,19 @@
+#include <stdio.h>
+int max(int,int);
+int main()
+{
+    int a,b,n;
+    scanf("%d",&n);
+    scanf("%d",&a);
+    n-=1;
+    do{
+        scanf("%d",&b);
+        a=max(a,b);
+        n--;
+    }while(n>0);
+    printf("%d",a);
+}
+int max(int a,int b)
+{
+    return a>b?a:b;
+}
