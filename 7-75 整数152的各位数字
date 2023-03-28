@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{   
+    int a,b,c;
+    c=152%10;
+    b=(152/10)%10;
+    a=152/100;
+    printf("152 = %d + %d*10 + %d*100",c,b,a);
+}
