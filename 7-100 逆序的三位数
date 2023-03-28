@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() 
+{
+    int a,g,s,b;
+    scanf("%d",&a);
+    g=a%10;
+    s=a/10%10;
+    b=a/100;
+    a=g*100+s*10+b;
+    printf("%d",a);
+}
