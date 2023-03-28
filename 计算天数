@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int year,month,day,days,d,m2;
+    scanf("%d/%d/%d/",&year,&month,&day);
+    if(year%4==0&&year%100!=0)
+    {   days=366,m2=29;}
+    else if(year%400==0)
+    {   days=366,m2=29;}
+    else 
+    {   days=365,m2=28;}
+    switch(month)
+    {   case 1:d=day;break;
+        case 2:d=day+31;break;
+        case 3:d=day+31+m2;break;
+        case 4:d=day+31+m2+31;break;
+        case 5:d=day+31+m2+31+30;break;
+        case 6:d=day+31+m2+31+30+31;break;
+        case 7:d=day+31+m2+31+30+31+30;break;
+        case 8:d=day+31+m2+31+30+31+30+31;break;
+        case 9:d=day+31+m2+31+30+31+30+31+31;break;
+        case 10:d=day+31+m2+31+30+31+30+31+31+30;break;
+        case 11:d=day+31+m2+31+30+31+30+31+31+30+31;break;
+        case 12:d=day+31+m2+31+30+31+30+31+31+30+31+30;break;
+    }
+    printf("%d",d);
+    return 0;
+}
