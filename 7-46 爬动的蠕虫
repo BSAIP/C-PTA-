@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    int N,U,D,t,S=0;
+    scanf("%d %d %d",&N,&U,&D);
+    for(t=1;S<N;t++)
+    {
+        S+=U;
+        if(S>=N)
+        break;
+        t++;
+        S-=D;
+    }
+    printf("%d",t);
+}
