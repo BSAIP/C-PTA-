@@ -1,0 +1,18 @@
+#include <stdio.h>
+int min(int,int);
+int main()
+{
+    int n,a,b;
+    scanf("%d",&n);
+    scanf("%d",&a);
+    while(n>=2){
+        scanf("%d",&b);
+        n--;
+        a=min(a,b);
+    }
+    printf("min = %d",a);
+}
+int min(int a,int b)
+{
+    return a<b?a:b;
+}
