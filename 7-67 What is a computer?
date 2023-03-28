@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main() 
+{
+    char*a[]={"What is a computer?"};
+    printf("%s",*a);
+}
