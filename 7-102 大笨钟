@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    int hh,mm,cnt=0;
+    scanf("%d:%d",&hh,&mm);
+    if(hh>12)
+    {
+        if(mm==0)
+        cnt=hh-12;
+        else
+        cnt=hh-11;
+        do{
+            printf("Dang");
+            cnt--;
+        }while(cnt>0);
+    }
+    else
+    printf("Only %02d:%02d.  Too early to Dang.",hh,mm);//注意时间的输出格式，不要利用自己想出的h1,h2
+    return 0;
+}
