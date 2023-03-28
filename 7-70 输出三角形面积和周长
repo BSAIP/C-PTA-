@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{
+    int a,b,c,flag=-1;
+    double s,area,per;
+    scanf("%d %d %d",&a,&b,&c);
+    if(a+b>c)
+    {
+        if(b+c>a)
+        {
+            if(a+c>b)
+            flag=1;
+        }
+    }
+    if(flag==1)
+    {
+        s=(a+b+c)/2.0;
+        area=sqrt(s*(s-a)*(s-b)*(s-c));
+        per=a+b+c;
+        printf("area = %.2f; perimeter = %.2f",area,per);
+    }
+    else
+    printf("These sides do not correspond to a valid triangle");
+}
