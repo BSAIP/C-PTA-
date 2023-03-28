@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() 
+{
+    int m,n;
+    double sum=0;
+    scanf("%d %d",&m,&n);
+    do{
+        sum+=(m*m+1.0/m);
+        m++;
+    }while(m<n+1);
+    printf("sum = %.6f",sum);
+}
