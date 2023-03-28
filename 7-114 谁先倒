@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,N,a1[100],a2[100],b1[100],b2[100],cnta=0,cntb=0,flag=0;
+    scanf("%d %d",&a,&b);
+    scanf("%d",&N);
+    for(int i=0;i<N;i++)
+    {scanf("%d %d %d %d",&a1[i],&a2[i],&b1[i],&b2[i]);}
+    for(int i=0;i<N;i++)
+    {    if(a2[i]==a1[i]+b1[i]&&a2[i]!=b2[i])
+        cnta++;
+        else if(b2[i]==a1[i]+b1[i]&&a2[i]!=b2[i])
+        cntb++;
+        if(cnta>a)
+        {flag=1;break;}
+        else if(cntb>b)
+        {flag=-1;break;}
+    }
+    if(flag==1)
+    {printf("A\n");
+    printf("%d",cntb);}
+    else if(flag==-1)
+    {printf("B\n");
+    printf("%d",cnta);}
+}//注意；如何解决输入和输出的不同步，以及达到条件后继续输入数据但不处理（可通过遍历数组解决）
