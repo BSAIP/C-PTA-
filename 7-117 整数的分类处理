@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int N,a,i=0,A1=0,A2=0,sum=0,cnt1=0,cnt2=0,cnt3=0;
+    scanf("%d",&N);
+    do{
+        scanf("%d",&a);
+        if(a%3==0&&a>A1)
+        {A1=a;cnt1++;}
+        else if(a%3==1)
+        {A2++;cnt2++;}
+        else if(a%3==2)
+        {sum+=a;cnt3++;}
+        i++;
+    }while(i<N);
+    if(cnt1==0)
+    printf("NONE ");
+    else
+    printf("%d ",A1);
+    if(cnt2==0)
+    printf("NONE ");
+    else
+    printf("%d ",A2);
+    if(cnt3==0)
+    printf("NONE");
+    else
+    printf("%.1f",sum*1.0/cnt3);
+}//注意A2，A3的判定方法！
