@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int a,c,d;
+    double b;
+    scanf("%d",&a);
+    b=a/(100*0.3048);
+    c=b/1;
+    d=(b-c)*12;
+    printf("%d %d",c,d);
+    return 0;
+}
