@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int N;
+    double S;
+    scanf("%d",&N);
+    for(S=0;N>0;N--)
+    {
+        S+=sqrt(N);
+    }
+    printf("sum = %.2f",S);
+}
