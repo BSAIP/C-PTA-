@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main()
+{
+    char* a[]={"Welcome to You!"};
+    printf("%s",*a);
+}
