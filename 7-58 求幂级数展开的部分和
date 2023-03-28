@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double sum=1.0,i=1.0,i1,s,x;
+    scanf("%lf",&x);
+    do{   i1=1.0;
+        s=1.0;
+        do{
+            s*=i1;
+            i1++;
+        }while(i1<=i);
+        sum+=pow(x,i)/s;
+        i++;
+    }while(pow(x,i-1.0)/s>=1e-5);
+    printf("%.4f",sum);
+}
