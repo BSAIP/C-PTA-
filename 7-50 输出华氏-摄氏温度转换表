@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+     int lower,upper,fa;
+     double ce;
+     scanf("%d %d",&lower,&upper);
+     fa=lower;
+     if(lower<=upper&&upper<=100)
+     {
+         printf("fahr celsius\n");
+         do{
+         ce=5*(fa-32)/9.0;
+         printf("%d%6.1f\n",fa,ce);
+         fa+=2;
+        }while(fa<upper);
+     }
+     else
+     printf("Invalid.");
+}
