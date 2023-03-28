@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int cnt1=0,cnt2=0;
+    char a;
+    do{
+        scanf("%c",&a);
+        if(a!='A'&&a!='E'&&a!='I'&&a!='O'&&a!='U'&&a!=' ')
+        {   
+            if(a>65&&a<=90)
+            cnt1++;
+        }
+        if(a=='\n')
+        break;
+        cnt2++;
+    }while(cnt2<80);
+    printf("%d",cnt1);
+}
