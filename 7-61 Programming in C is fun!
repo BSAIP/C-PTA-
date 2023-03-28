@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main()
+{
+    char* a[]={"Programming in C is fun!"};
+    printf("%s",*a);
+}
+
