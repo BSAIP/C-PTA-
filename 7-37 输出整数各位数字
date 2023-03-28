@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{   
+    long int N,t,c;
+    int d=0,m;
+    scanf("%ld",&N);
+    t=N;
+    do{
+        t/=10;
+        d++;
+    }while(t>0);
+    c=pow(10,d-1);
+    do{
+        m=N/c;
+        N%=c;
+        c/=10;
+        printf("%d ",m);
+    }while(c>0);
+}
