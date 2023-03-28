@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int a[4],max,mid,min,n;
+    scanf("%d",&a[0]);
+    a[1]=a[0]+1;
+    a[2]=a[1]+1;
+    a[3]=a[2]+1;
+    for(n=0;n<4;n++)
+    {
+        if(n==0)
+        {min=n+1;mid=n+2;max=n+3;}
+        else if(n==1)
+        {min=n-1;mid=n+1;max=n+2;}
+        else if(n==2)
+        {min=n-2;mid=n-1;max=n+1;}
+        else if(n==3)
+        {min=n-3;mid=n-2;max=n-1;}
+        printf("%d ",a[n]*100+a[min]*10+a[mid]);
+        printf("%d ",a[n]*100+a[min]*10+a[max]);
+        printf("%d ",a[n]*100+a[mid]*10+a[min]);
+        printf("%d ",a[n]*100+a[mid]*10+a[max]);
+        printf("%d ",a[n]*100+a[max]*10+a[min]);
+        printf("%d\n",a[n]*100+a[max]*10+a[mid]);
+    }
+}
