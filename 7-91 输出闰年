@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() 
+{
+    int n,i=2001,cnt=0,flag;
+    scanf("%d",&n);
+    if(n<2001||n>2100)
+    printf("Invalid year!");
+    else
+    {
+        while(i<=n)
+        {   flag=-1;
+            if(i%4==0&&i%100!=0||i%400==0)
+            flag=1;
+            if(flag==1)
+            {printf("%d\n",i);
+            cnt++;}
+            i++;
+        }
+        if(cnt==0)
+        printf("None");
+    }
+}
