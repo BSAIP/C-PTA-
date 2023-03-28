@@ -1,0 +1,20 @@
+#include <stdio.h>
+double fact(int a);
+int main()
+{
+    int m,n;
+    double result;
+    scanf("%d %d",&m,&n);
+    result=fact(n)/(fact(m)*fact(n-m));
+    printf("result = %.0f",result);
+}
+double fact(int a)
+{
+    int i=1;
+    double ch=1;
+    do{
+        ch=ch*i;
+        i++;
+    }while(i<=a);
+    return ch;
+}
