@@ -1,0 +1,38 @@
+#include <stdio.h>
+double a3=0,a2=0,a1=0,a0=0;
+double f(double x)
+{
+    return a3*x*x*x+a2*x*x+a1*x+a0;
+}
+int main()
+{
+    double a,b,mid=0.0;
+    scanf("%lf %lf %lf %lf",&a3,&a2,&a1,&a0);
+    scanf("%lf %lf",&a,&b);
+    while((b-a)>=0.01)
+    {   if(f(a)==0)
+        {mid=a;
+        break;}
+        if(f(b)==0)
+        {
+            mid=b;
+            break;
+        }
+        if(f(a)*f(b)<0)
+        {
+            mid=(a+b)/2;
+            if(f(mid)==0)
+            break;
+            else if(f(a)*f(mid)>=0)
+            a=mid;
+            else if(f(b)*f(mid)>=0)
+            b=mid;
+        }
+    }
+    if((b-a)<0.01)
+    mid=(a+b)/2;
+    printf("%.2f",mid);
+}//注意：问题一；函数f(x)的定义，注意a3..a0是如何传进f(x)，且进行后续修改的；
+ //     问题二；对于原本的数学问题分析不够明确，未对端点进行讨论，导致端点处程序超时；
+//      问题三；关于pow函数的效率问题；
+//      参考网址；https://tefuirnever.blog.csdn.net/article/details/105446782
