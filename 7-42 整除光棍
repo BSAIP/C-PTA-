@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    long long int S=0;
+    int cnt=0,x;
+    scanf("%d",&x);
+    while(S<x)
+    {
+        S=10*S+1;
+        cnt++;
+    }
+    while(1)
+    {
+        printf("%d",S/x);
+        S%=x;
+        if(S==0)
+        break;
+        S=10*S+1;
+        cnt++;
+    }
+    printf(" %d",cnt);
+}//注意：高位数的除法是非常耗时的，可以模仿手算竖式除法的方式，每次打印一位，在余数后补位，继续除。
