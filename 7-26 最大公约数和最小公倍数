@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int M,N,t,i,zd,zx;
+    scanf("%d %d",&M,&N);
+    if(N>M)
+    {
+        t=N;
+        N=M;
+        M=t;
+    }
+    for(i=N;i>0;i--)
+    {
+        if(M%i==0&&N%i==0)
+        {zd=i;break;}
+    }
+    int c=M;
+    if(M%N==0)
+    zx=M;
+    while(M%N!=0)
+    {
+        M+=c;
+        zx=M;
+    }
+    printf("%d %d",zd,zx);
+    
+}
