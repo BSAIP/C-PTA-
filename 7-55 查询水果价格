@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{   int a[5],cnt=0,i=0;
+    double b[5]={0,3.00,2.50,4.10,10.20};
+    printf("[1] apple\n[2] pear\n[3] orange\n[4] grape\n[0] exit\n");
+    do{
+        scanf("%d",&a[i]);
+        if(a[i]==0)
+        break;
+        i++;
+        cnt++;
+    }while(cnt<5);
+    if(i!=0)
+    i=0;
+    while(a[i]!=0)
+    {
+        if(a[i]!=1&&a[i]!=2&&a[i]!=3&&a[i]!=4)
+        printf("price = 0.00\n");
+        else
+        printf("price = %.2f\n",b[a[i]]);
+        i++;
+        if(i==cnt)
+        break;
+    }
+}
