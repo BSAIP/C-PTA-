@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main()
+{
+    int N,m,n,c,count=0,sum,i;
+    scanf("%d %d",&m,&n);
+    N=n-m;
+    int a[n];
+    for(;m<n+1;m++)
+    {c=0,sum=0;
+    
+        for(int i=1;i<m;i++)
+        {
+            if(m%i==0)
+            {
+                sum+=i;
+                a[c]=i;
+                c++;
+            }
+        }
+        if(sum==m)
+        {   count++;
+            int i=0;
+            printf("%d = ",m);
+            do{if(i==c-1)
+                {printf("%d\n",a[i]);}
+                else
+                {printf("%d + ",a[i]);}
+                i++;
+            }while(i<c);
+            
+        }
+    }
+    if(count==0)
+    printf("None");
+}
