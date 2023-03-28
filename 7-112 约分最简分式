@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int a,b,max;
+    scanf("%d/%d",&a,&b);
+    for(max=a;max>0;max--)
+    {
+        if(a%max==0&&b%max==0)
+        break;
+    }
+    a=a/max;
+    b=b/max;
+    printf("%d/%d",a,b);
+}
