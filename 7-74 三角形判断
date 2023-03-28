@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{   
+    int flag=-1;
+    double x1,y1,x2,y2,x3,y3,L,A,a,b,c,s;
+    scanf("%lf %lf %lf %lf %lf %lf",&x1,&y1,&x2,&y2,&x3,&y3);
+    a=sqrt(pow(x1-x2,2)+pow(y1-y2,2));
+    b=sqrt(pow(x1-x3,2)+pow(y1-y3,2));
+    c=sqrt(pow(x2-x3,2)+pow(y2-y3,2));
+    if(a+b>c)
+    {
+        if(b+c>a)
+        {
+            if(a+c>b)
+            flag=1;
+        }
+    }
+    if(flag==1)
+    {
+        s=(a+b+c)/2.0;
+        A=sqrt(s*(s-a)*(s-b)*(s-c));
+        L=a+b+c;
+        printf("L = %.2f, A = %.2f",L,A);
+    }
+    else{
+        printf("Impossible");
+    }
+}
