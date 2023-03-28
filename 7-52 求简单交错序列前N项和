@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int N,c=1.0;
+    double sum=1.0,i=4.0;
+    scanf("%d",&N);
+    do{
+        sum+=pow(-1,c)*1/i;
+        i+=3.0;
+        c++;
+    }while(c<N);
+    if(N==1)
+    sum=1.0;
+    printf("sum = %.3f",sum);
+}
