@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int n,t;
+    double b,sum=0,min=10,max=0;
+    scanf("%d",&n);
+    t=n;
+    do{
+        scanf("%lf",&b);
+        sum+=b;
+        if(b<min)
+        min=b;
+        if(b>max)
+        max=b;
+        t--;
+    }while(t>0);
+    sum-=(max+min);
+    printf("%.2f",sum/(n-2));
+}
