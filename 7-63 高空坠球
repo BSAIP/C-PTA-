@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{
+    long int h,n,i=1;
+    double s,hn=0;
+    scanf("%ld %ld",&h,&n);
+    s=h;
+    while(i<=n){
+        hn=pow(0.5,i)*h;
+        s+=2*hn;
+        i++;
+    }
+    s-=pow(0.5,i-2)*h;
+    if(n==0)
+    s=0;
+    printf("%.1f %.1f",s,hn);
+}
