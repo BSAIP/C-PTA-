@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n,t,a=1,cnt;
+    scanf("%d",&n);
+    for(t=n;t>0;t--)
+    {
+        cnt=0;
+        do{
+            printf("%4d",a);
+            a++;
+            cnt++;
+        }while(cnt<t);
+        printf("\n");
+    }
+    return 0;
+}
