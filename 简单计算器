@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() 
+{
+    int a,b;
+    char ch;
+    scanf("%d",&a);
+    while(1){
+        scanf("%c",&ch);
+        if(ch=='=')
+        {printf("%d",a);
+        break;}
+        scanf("%d",&b);
+        if(ch=='+')
+        a+=b;
+        else if(ch=='-')
+        a-=b;
+        else if(ch=='*')
+        a*=b;
+        else if(ch=='/')
+        {   if(b==0)
+            {printf("ERROR");
+             break;}
+            else
+            a/=b;
+        }
+        else
+        {printf("ERROR");break;}
+    }
+}
