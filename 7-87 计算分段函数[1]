@@ -1,0 +1,16 @@
+#include <stdio.h>
+double f(double);
+int main() 
+{
+    double x;
+    scanf("%lf",&x);
+    printf("f(%.1f) = %.1f",x,f(x));
+}
+double f(double x)
+{
+    if(x!=0)
+    {
+        x=1/x;
+    }
+    return x;
+}
