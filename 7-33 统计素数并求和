@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() 
+{
+    int M,N,sum=0,count=0;
+    scanf("%d %d",&M,&N);
+    if(M==1)
+        M++;
+    for(;M<N+1;M++)
+        {   
+            int i=2,flag=1;
+            for(i=2;i<M;i++)
+            {
+                if(M%i==0)
+                {flag=-1;break;}
+            }
+            if(flag==1)
+            {
+                sum+=M;
+                count++;
+            }
+        }
+    printf("%d %d",count,sum);
+
+}
